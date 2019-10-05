@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/homework2.dir/doubll.c.o  -o homework2 

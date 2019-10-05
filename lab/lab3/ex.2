@@ -1,0 +1,26 @@
+1
+register represent varibale k
+t0
+
+2
+register pointer to source and dest
+source:t4
+dest:t6
+
+3
+assembly code for loop
+
+loop:
+	#code
+	#conditions exit
+	jal x0,loop
+exit:
+
+4
+how pointer are mainupulated in the assembly code
+
+a. fisrt there is a .data storing the data you want to point ti
+b. la register dataname to get the address of the pointer
+c. lw register 0(register_above) here we can get the word(4 byte) store in the adress in the above register
+
+then we can access to the things the pointer(reg1) pointed to (reg2)

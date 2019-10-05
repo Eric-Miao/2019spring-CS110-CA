@@ -1,0 +1,43 @@
+
+void quick_sort(int a[],int low, int high)
+{
+    int i;
+    i = patition(a, low-1, high);
+    if(low < high)
+    {
+    quick_sort(a, low, i-1);
+    quick_sort(a, i, high-1);
+    }
+    }
+ 
+void print_array(int a[], int n)
+{
+    int i;
+    for(i =0 ; i<n ;i++)
+    {
+        printf("%d  ", a[i]);
+    }
+}
+ 
+int patition(int a[], int p, int q)
+{
+    int i;
+    int j = p -1 ;
+    int pivot = a[q-1];
+    for(i=p; i<q; i++)
+    {
+        if(a[i] <= pivot)
+        {
+            ++j;
+            swap(&a[i], &a[j]);
+        }
+    }
+    swap(&a[j], &pivot);
+    return j+1;
+}
+
+--------------------- 
+作者：hellBaron 
+来源：CSDN 
+原文：https://blog.csdn.net/way88liu/article/details/46799553 
+版权声明：本文为博主原创文章，转载请附上博文链接！
